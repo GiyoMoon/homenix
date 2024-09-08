@@ -2,7 +2,7 @@
 {
   imports = [
     ./common.nix
-    # ./k3s.nix
+    ./k3s.nix
     ./sops.nix
   ];
 }
