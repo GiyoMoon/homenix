@@ -181,11 +181,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1725805950,
-        "narHash": "sha256-Q1mCq9MTQZGFoeJrgW61cZROTz0rsWXPaZv5yn3A4N0=",
+        "lastModified": 1725917241,
+        "narHash": "sha256-oIgBuj32fliDUi8n8xcsI2/imiCN/l7663Yi+CEpqFw=",
         "owner": "GiyoMoon",
         "repo": "nixos-turing-rk1",
-        "rev": "fd07be368c07da6488dc2e1d0d7152907fa90917",
+        "rev": "9d34953433753577e8d6a401e9a5bda546e9662b",
         "type": "github"
       },
       "original": {

@@ -1,11 +1,11 @@
 # get public age key from ssh key:
-# nix-shell -p ssh-to-age --run 'cat /etc/ssh/ssh_host_ed25519_key.pub | ssh-to-age'
+# sudo nix-shell -p ssh-to-age --run 'cat /etc/ssh/ssh_host_ed25519_key.pub | ssh-to-age'
 # run to update encrypted file with new keys:
 # nix-shell -p sops --run "sops updatekeys secrets/secrets.json"
 keys:
   - &local age1qntsa6e2c9ete42ycs6rszhxytj7xujlvpz35n3fup6gdmhl0qcsf5sg6f
-  - &node1 age1ztkn0255cyzfwy0sj3x5g0jyg8ykurj5ac20shhvnlwgfqjuzapqnrdun9
-  - &node3 age17zw6cu3a6ujhxlkzk35j78hgvftamxcay398snx3tycpqj3d4f8qyawz6g
+  - &node1 age1kxj0ws3zcjq6raw2k34qquj9yg4rjkjqa9ds2dprg2fx28nfkpeqr78zev
+  - &node3 age18jle5g57e2qnv9v0rct6tuapcvp8z3rl5lv9t3085qrt6e0gffgsk8rlw0
 creation_rules:
   - path_regex: secrets/secrets.json$
     key_groups:
