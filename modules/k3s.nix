@@ -2,6 +2,7 @@
   lib,
   config,
   meta,
+  pkgs,
   ...
 }:
 let
@@ -10,6 +11,8 @@ let
   role = if builtins.elem meta.hostname serverNodes then "server" else "agent";
 in
 {
+  imports = if isMainNode then [ ./kubenix ] else [ ];
+
   networking.firewall = {
     allowedTCPPorts = [
       6443 # K3s supervisor and Kubernetes API Server
@@ -21,20 +24,31 @@ in
     ];
   };
 
+  environment.systemPackages = with pkgs; [
+    openiscsi
+    nfs-utils
+    ipset
+  ];
+
+  systemd.services.k3s.path = with pkgs; [
+    openiscsi
+    nfs-utils
+    ipset
+  ];
+
   services.k3s = {
     enable = true;
     inherit role;
-    # Get token
-    # cat /var/lib/rancher/k3s/server/token
-    tokenFile = config.sops.secrets.k3s_token.path;
     clusterInit = isMainNode;
+    # Get token from main node
+    # cat /var/lib/rancher/k3s/server/token
+    tokenFile = if !isMainNode then config.sops.secrets.k3s_token.path else null;
     serverAddr = if !isMainNode then "https://node1.lan:6443" else "";
-    extraFlags =
-      [
-        # "--cluster-reset" # If everything breaks, this will save you :3
-      ]
-      ++ lib.optionals (role == "server") [
-        ("--tls-san " + meta.hostname + ".lan")
-      ];
+    extraFlags = lib.optionals (role == "server") [
+      # "--cluster-reset" # If everything breaks, this will save you :3
+      "--disable=traefik"
+      "--disable=metrics-server"
+      ("--tls-san " + meta.hostname + ".lan")
+    ];
   };
 }

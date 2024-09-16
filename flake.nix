@@ -7,12 +7,31 @@
     };
     deploy-rs = {
       url = "github:serokell/deploy-rs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     turing-rk1 = {
       url = "github:GiyoMoon/nixos-turing-rk1";
+      # Don't follow nixpkgs, or we'd need to rebuild whole kernel on every nixpkgs update
     };
     sops-nix = {
       url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    kubenix = {
+      url = "github:hall/kubenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    traefik-chart = {
+      url = "github:traefik/traefik-helm-chart";
+      flake = false;
+    };
+    cert-manager-chart = {
+      url = "https://charts.jetstack.io/charts/cert-manager-v1.15.3.tgz";
+      flake = false;
+    };
+    cert-manager-crds = {
+      url = "https://github.com/cert-manager/cert-manager/releases/download/v1.15.3/cert-manager.crds.yaml";
+      flake = false;
     };
   };
 
@@ -23,7 +42,9 @@
       deploy-rs,
       sops-nix,
       turing-rk1,
-    }:
+      kubenix,
+      ...
+    }@inputs:
     let
       system = "aarch64-linux";
     in
@@ -33,6 +54,7 @@
           inherit system;
 
           specialArgs = {
+            inherit kubenix inputs;
             meta = {
               hostname = "node1";
             };
@@ -48,6 +70,7 @@
           inherit system;
 
           specialArgs = {
+            inherit inputs;
             meta = {
               hostname = "node3";
             };
