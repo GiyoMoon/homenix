@@ -40,6 +40,11 @@
       url = "https://github.com/emberstack/helm-charts/raw/main/repository/reflector/reflector-7.1.288.tgz";
       flake = false;
     };
+
+    longhorn-chart = {
+      url = "github:longhorn/longhorn";
+      flake = false;
+    };
   };
 
   outputs =

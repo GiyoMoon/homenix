@@ -30,6 +30,10 @@ in
     ipset
   ];
 
+  systemd.tmpfiles.rules = [
+    "L+ /usr/local/bin - - - - /run/current-system/sw/bin/"
+  ];
+
   systemd.services.k3s.path = with pkgs; [
     openiscsi
     nfs-utils

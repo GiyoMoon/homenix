@@ -10,7 +10,7 @@
     ./system/cert-manager/crds.nix
   ];
 
-  environment.etc."kubenix.yaml".source =
+  environment.etc."kubenix-unresolved.yaml".source =
     (kubenix.evalModules.aarch64-linux {
       module =
         { kubenix, ... }:
@@ -27,8 +27,20 @@
       };
     }).config.kubernetes.resultYAML;
 
-  # TODO: Make this survive reboots
+  systemd.services.kubenixEval = {
+    description = "kubenix secret eval";
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+    };
+    script = # bash
+      ''
+        cat /etc/kubenix-unresolved.yaml | ${pkgs.vals}/bin/vals eval > /etc/kubenix.yaml
+      '';
+    wantedBy = [ "multi-user.target" ];
+  };
+
   system.activationScripts.kubenix.text = ''
-    cat /etc/kubenix.yaml | ${pkgs.vals}/bin/vals eval > /var/lib/rancher/k3s/server/manifests/kubenix.yaml
+    ln -sf /etc/kubenix.yaml /var/lib/rancher/k3s/server/manifests/kubenix.yaml
   '';
 }

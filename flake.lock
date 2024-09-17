@@ -119,6 +119,22 @@
         "type": "github"
       }
     },
+    "longhorn-chart": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726456198,
+        "narHash": "sha256-wTYcXrcSrA89wV6gBGlE9U6uoZmGb2e2M9DxHhKuAyg=",
+        "owner": "longhorn",
+        "repo": "longhorn",
+        "rev": "21a538d10198746515de9e0c0f87ccf660738393",
+        "type": "github"
+      },
+      "original": {
+        "owner": "longhorn",
+        "repo": "longhorn",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1726463316,
@@ -186,6 +202,7 @@
         "cert-manager-crds": "cert-manager-crds",
         "deploy-rs": "deploy-rs",
         "kubenix": "kubenix",
+        "longhorn-chart": "longhorn-chart",
         "nixpkgs": "nixpkgs",
         "reflector-chart": "reflector-chart",
         "sops-nix": "sops-nix",
