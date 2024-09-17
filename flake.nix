@@ -21,16 +21,23 @@
       url = "github:hall/kubenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     traefik-chart = {
       url = "github:traefik/traefik-helm-chart";
       flake = false;
     };
+
     cert-manager-chart = {
       url = "https://charts.jetstack.io/charts/cert-manager-v1.15.3.tgz";
       flake = false;
     };
     cert-manager-crds = {
       url = "https://github.com/cert-manager/cert-manager/releases/download/v1.15.3/cert-manager.crds.yaml";
+      flake = false;
+    };
+
+    reflector-chart = {
+      url = "https://github.com/emberstack/helm-charts/raw/main/repository/reflector/reflector-7.1.288.tgz";
       flake = false;
     };
   };

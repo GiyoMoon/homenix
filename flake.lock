@@ -82,16 +82,16 @@
     "kernel": {
       "flake": false,
       "locked": {
-        "lastModified": 1725176762,
-        "narHash": "sha256-NpZ1gNA18M1iWEowRnIAIBatq+LI17Npv1G3SVQznZY=",
+        "lastModified": 1726412276,
+        "narHash": "sha256-QIbHTLWI5CaStQmuoJ1k7odQUDRLsWNGY10ek0eKo8M=",
         "ref": "refs/heads/master",
-        "rev": "8e7c1c539395e34648d859c20b0f9478eb5901cc",
-        "revCount": 1296133,
+        "rev": "fa7818b3a6dd56c7956f515d287ed9f80c7bf59a",
+        "revCount": 1296649,
         "type": "git",
         "url": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git"
       },
       "original": {
-        "rev": "8e7c1c539395e34648d859c20b0f9478eb5901cc",
+        "rev": "fa7818b3a6dd56c7956f515d287ed9f80c7bf59a",
         "type": "git",
         "url": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git"
       }
@@ -121,11 +121,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1725634671,
-        "narHash": "sha256-v3rIhsJBOMLR8e/RNWxr828tB+WywYIoajrZKFM+0Gg=",
+        "lastModified": 1726463316,
+        "narHash": "sha256-gI9kkaH0ZjakJOKrdjaI/VbaMEo9qBbSUl93DnU7f4c=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "574d1eac1c200690e27b8eb4e24887f8df7ac27c",
+        "rev": "99dc8785f6a0adac95f5e2ab05cc2e1bf666d172",
         "type": "github"
       },
       "original": {
@@ -151,6 +151,35 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1726463316,
+        "narHash": "sha256-gI9kkaH0ZjakJOKrdjaI/VbaMEo9qBbSUl93DnU7f4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "99dc8785f6a0adac95f5e2ab05cc2e1bf666d172",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "reflector-chart": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720275622,
+        "narHash": "sha256-W5ph1FsZLfc51TG2kW57YXGVxuftuD/9gO374fmmrUI=",
+        "type": "tarball",
+        "url": "https://github.com/emberstack/helm-charts/raw/main/repository/reflector/reflector-7.1.288.tgz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/emberstack/helm-charts/raw/main/repository/reflector/reflector-7.1.288.tgz"
+      }
+    },
     "root": {
       "inputs": {
         "cert-manager-chart": "cert-manager-chart",
@@ -158,6 +187,7 @@
         "deploy-rs": "deploy-rs",
         "kubenix": "kubenix",
         "nixpkgs": "nixpkgs",
+        "reflector-chart": "reflector-chart",
         "sops-nix": "sops-nix",
         "traefik-chart": "traefik-chart",
         "turing-rk1": "turing-rk1"
@@ -171,11 +201,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1725765163,
-        "narHash": "sha256-rfd2c47iVSFI6bRYy5l8wRijRBaYDeU7dM8XCDUGqlA=",
+        "lastModified": 1726524647,
+        "narHash": "sha256-qis6BtOOBBEAfUl7FMHqqTwRLB61OL5OFzIsOmRz2J4=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "b68757cd2c3fa66d6ccaa0d046ce42a9324e0070",
+        "rev": "e2d404a7ea599a013189aa42947f66cede0645c8",
         "type": "github"
       },
       "original": {
@@ -216,11 +246,11 @@
     "traefik-chart": {
       "flake": false,
       "locked": {
-        "lastModified": 1726472764,
-        "narHash": "sha256-LO4UhAhqXPBDuhwG2XEQjI+dNDFIBwmMPZLDOS04WyU=",
+        "lastModified": 1726581243,
+        "narHash": "sha256-OxdjCr70waCGZLDSMuBDtx7N+GxPboIUnMjGrIwwztI=",
         "owner": "traefik",
         "repo": "traefik-helm-chart",
-        "rev": "cf703c7ddae652288144d70fd88a530667b53aa6",
+        "rev": "d7c36229bccea62865d2bb74894a59374370523a",
         "type": "github"
       },
       "original": {
@@ -253,16 +283,14 @@
     "turing-rk1": {
       "inputs": {
         "kernel": "kernel",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1725917241,
-        "narHash": "sha256-oIgBuj32fliDUi8n8xcsI2/imiCN/l7663Yi+CEpqFw=",
+        "lastModified": 1726601036,
+        "narHash": "sha256-ASa7BLIwErtL/c20fPyEH3S/jWoOU7p60KKk8AqUoFU=",
         "owner": "GiyoMoon",
         "repo": "nixos-turing-rk1",
-        "rev": "9d34953433753577e8d6a401e9a5bda546e9662b",
+        "rev": "b79126febab8bcee93bf6f6a3095ddd59ca218e2",
         "type": "github"
       },
       "original": {

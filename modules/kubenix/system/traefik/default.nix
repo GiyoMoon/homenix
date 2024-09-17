@@ -1,6 +1,7 @@
 {
   imports = [
-    ./helm.nix
+    ./chart.nix
+    ./dashboard
   ];
   kubernetes = {
     resources.namespaces.traefik = { };

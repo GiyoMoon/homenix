@@ -14,7 +14,7 @@
       routes = [
         {
           kind = "Rule";
-          match = "Host(`traefik.jasi.app`)";
+          match = "Host(`traefik.local.jasi.app`)";
           middlewares = [
             {
               name = "traefik-dashboard-basicauth";
@@ -30,7 +30,7 @@
         }
       ];
       tls = {
-        secretName = "jasi-app-tls";
+        secretName = "local-jasi-app";
       };
     };
   };

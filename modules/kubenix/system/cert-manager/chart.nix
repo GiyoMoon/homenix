@@ -8,7 +8,7 @@
         cp -r $src/ $out
       '';
     };
-    namespace = "traefik";
+    namespace = "cert-manager";
     overrideNamespace = false;
     # cert-manager chart doesn't include CRDs
     includeCRDs = false;
