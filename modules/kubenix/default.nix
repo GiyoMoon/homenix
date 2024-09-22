@@ -41,6 +41,7 @@
   };
 
   system.activationScripts.kubenix.text = ''
+    cat /etc/kubenix-unresolved.yaml | ${pkgs.vals}/bin/vals eval > /etc/kubenix.yaml
     ln -sf /etc/kubenix.yaml /var/lib/rancher/k3s/server/manifests/kubenix.yaml
   '';
 }

@@ -5,7 +5,7 @@
 keys:
   - &local age1qntsa6e2c9ete42ycs6rszhxytj7xujlvpz35n3fup6gdmhl0qcsf5sg6f
   - &node1 age1kxj0ws3zcjq6raw2k34qquj9yg4rjkjqa9ds2dprg2fx28nfkpeqr78zev
-  - &node3 age18jle5g57e2qnv9v0rct6tuapcvp8z3rl5lv9t3085qrt6e0gffgsk8rlw0
+  - &node3 age1qu3wj03tnj2hyzgc3xza8n2lsm3df52veen7zrpksf48qjzqw9tstnuyfj
 creation_rules:
   - path_regex: secrets/secrets.json$
     key_groups:

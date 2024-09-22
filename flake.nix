@@ -11,7 +11,7 @@
     };
     turing-rk1 = {
       url = "github:GiyoMoon/nixos-turing-rk1";
-      # Don't follow nixpkgs, or we'd need to rebuild whole kernel on every nixpkgs update
+      # Don't follow nixpkgs, or we'd need to rebuild the entire kernel on every nixpkgs update
     };
     sops-nix = {
       url = "github:Mic92/sops-nix";
@@ -92,6 +92,7 @@
             turing-rk1.nixosModules.turing-rk1
             sops-nix.nixosModules.sops
             ./modules/default.nix
+            ./nodes/node3.nix
           ];
         };
       };

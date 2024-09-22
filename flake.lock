@@ -303,11 +303,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1726601036,
-        "narHash": "sha256-ASa7BLIwErtL/c20fPyEH3S/jWoOU7p60KKk8AqUoFU=",
+        "lastModified": 1727042501,
+        "narHash": "sha256-33N4KwXXppp8KctlXX3IWUxZ9je8REtsysRVBpo8Aig=",
         "owner": "GiyoMoon",
         "repo": "nixos-turing-rk1",
-        "rev": "b79126febab8bcee93bf6f6a3095ddd59ca218e2",
+        "rev": "266191e1ceb16897e6b6bf2263c90ef12ab41530",
         "type": "github"
       },
       "original": {
