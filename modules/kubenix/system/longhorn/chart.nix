@@ -12,14 +12,15 @@
     includeCRDs = true;
     values = {
       defaultSettings = {
+        createDefaultDiskLabeledNodes = true;
         defaultDataPath = "/storage";
         # backupTarget = "cifs://";
         # backupTargetCredentialSecret = "cifs-secret";
-        service = {
-          ui = {
-            loadBalancerIP = "192.168.40.80";
-            type = "LoadBalancer";
-          };
+      };
+      service = {
+        ui = {
+          type = "LoadBalancer";
+          loadBalancerIP = "192.168.40.80";
         };
       };
     };

@@ -15,13 +15,14 @@
         "jasi.app"
         "*.jasi.app"
       ];
-      # secretTemplate = {
-      #   annotation = {
-      #     "reflector.v1.k8s.emberstack.com/reflection-auto-enabled" = "true";
-      #     "reflector.v1.k8s.emberstack.com/reflection-allowed" = "true";
-      #     "reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces" = "";
-      #   };
-      # };
+      secretTemplate = {
+        annotation = {
+          "reflector.v1.k8s.emberstack.com/reflection-allowed" = "true";
+          "reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces" = "media";
+          "reflector.v1.k8s.emberstack.com/reflection-auto-enabled" = "true";
+          "reflector.v1.k8s.emberstack.com/reflection-auto-namespaces" = "media";
+        };
+      };
     };
   };
   kubernetes.resources.certificates.local-jasi-app = {
