@@ -106,15 +106,15 @@
         "treefmt": "treefmt"
       },
       "locked": {
-        "lastModified": 1719313214,
-        "narHash": "sha256-3CY/B/60A5rikhU5OlgDdNZMsOSIA1MteA2UPm4EHU0=",
-        "owner": "hall",
+        "lastModified": 1727367011,
+        "narHash": "sha256-rPOLaIimpNXb4n2m2+9Xeu7nmWTX2CYOtFfr+0hB0cI=",
+        "owner": "GiyoMoon",
         "repo": "kubenix",
-        "rev": "d6ddf1b4e8804e3c9564696a493ac14c0bcb19e2",
+        "rev": "a8f89b747f1a2f8764c6f90dd292460cbd49b848",
         "type": "github"
       },
       "original": {
-        "owner": "hall",
+        "owner": "GiyoMoon",
         "repo": "kubenix",
         "type": "github"
       }
@@ -122,11 +122,11 @@
     "longhorn-chart": {
       "flake": false,
       "locked": {
-        "lastModified": 1726456198,
-        "narHash": "sha256-wTYcXrcSrA89wV6gBGlE9U6uoZmGb2e2M9DxHhKuAyg=",
+        "lastModified": 1727149425,
+        "narHash": "sha256-Hu5hn9qzgAJCDTco7bOgj46HjdgmJYvbMpFnVu2l/YQ=",
         "owner": "longhorn",
         "repo": "longhorn",
-        "rev": "21a538d10198746515de9e0c0f87ccf660738393",
+        "rev": "33a2c0f6281fb399ecf6fd7f85b21ee79c74f9f4",
         "type": "github"
       },
       "original": {
@@ -135,13 +135,26 @@
         "type": "github"
       }
     },
+    "metallb-chart": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1721738530,
+        "narHash": "sha256-CHf0YnutvnItwZtFf3+3mhcfRDoSADl/6ovDoRHqwLM=",
+        "type": "tarball",
+        "url": "https://github.com/metallb/metallb/releases/download/metallb-chart-0.14.8/metallb-0.14.8.tgz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/metallb/metallb/releases/download/metallb-chart-0.14.8/metallb-0.14.8.tgz"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1726463316,
-        "narHash": "sha256-gI9kkaH0ZjakJOKrdjaI/VbaMEo9qBbSUl93DnU7f4c=",
+        "lastModified": 1727122398,
+        "narHash": "sha256-o8VBeCWHBxGd4kVMceIayf5GApqTavJbTa44Xcg5Rrk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "99dc8785f6a0adac95f5e2ab05cc2e1bf666d172",
+        "rev": "30439d93eb8b19861ccbe3e581abf97bdc91b093",
         "type": "github"
       },
       "original": {
@@ -203,6 +216,7 @@
         "deploy-rs": "deploy-rs",
         "kubenix": "kubenix",
         "longhorn-chart": "longhorn-chart",
+        "metallb-chart": "metallb-chart",
         "nixpkgs": "nixpkgs",
         "reflector-chart": "reflector-chart",
         "sops-nix": "sops-nix",
@@ -263,11 +277,11 @@
     "traefik-chart": {
       "flake": false,
       "locked": {
-        "lastModified": 1726581243,
-        "narHash": "sha256-OxdjCr70waCGZLDSMuBDtx7N+GxPboIUnMjGrIwwztI=",
+        "lastModified": 1726822445,
+        "narHash": "sha256-g2BR2r38UWNZ/Nx2CxluJod2FvmJVnc7Oywu+JTSKSo=",
         "owner": "traefik",
         "repo": "traefik-helm-chart",
-        "rev": "d7c36229bccea62865d2bb74894a59374370523a",
+        "rev": "c97a5c2cd9d8519ad9368ef4a2b2d99242566785",
         "type": "github"
       },
       "original": {
@@ -303,11 +317,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1727042501,
-        "narHash": "sha256-33N4KwXXppp8KctlXX3IWUxZ9je8REtsysRVBpo8Aig=",
+        "lastModified": 1727379447,
+        "narHash": "sha256-DDQpXg7Zes5dQnqTdvoV8OZW8AjZZs3C6+U5aELfuCo=",
         "owner": "GiyoMoon",
         "repo": "nixos-turing-rk1",
-        "rev": "266191e1ceb16897e6b6bf2263c90ef12ab41530",
+        "rev": "bedbfc780417758fb7757778e21c21d57fdd8446",
         "type": "github"
       },
       "original": {

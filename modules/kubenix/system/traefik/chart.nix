@@ -38,7 +38,6 @@
           http3 = {
             enabled = true;
           };
-          advertisedPort = 4443;
           tls = {
             enabled = true;
           };
@@ -72,7 +71,7 @@
         annotations = { };
         labels = { };
         spec = {
-          loadBalancerIP = "192.168.30.80";
+          loadBalancerIP = "10.0.20.10";
         };
         loadBalancerSourceRanges = [ ];
         externalIPs = [ ];

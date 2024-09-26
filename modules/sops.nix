@@ -9,4 +9,7 @@
   sops.secrets.cloudflare_api_key = { };
   sops.secrets.traefik_dashboard_auth = { };
   sops.secrets.letsencrypt_email = { };
+  sops.secrets.nzbget_auth_user = { };
+  sops.secrets.nzbget_auth_password = { };
+  sops.secrets.pihole_password = { };
 }

@@ -3,9 +3,6 @@
     metadata = {
       name = "jellyfin";
       namespace = "media";
-      labels = {
-        app = "jellyfin";
-      };
     };
     spec = {
       replicas = 1;

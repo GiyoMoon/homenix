@@ -1,33 +1,31 @@
 {
   kubernetes.resources.persistentVolumeClaims = {
-    jellyfin-config = {
+    tdarr-server = {
       metadata = {
-        name = "jellyfin-config";
+        name = "tdarr-server";
         namespace = "media";
       };
       spec = {
         accessModes = [ "ReadWriteOnce" ];
-        volumeMode = "Filesystem";
         storageClassName = "longhorn-ssd";
         resources = {
           requests = {
-            storage = "50Gi";
+            storage = "10Gi";
           };
         };
       };
     };
-    jellyfin-data = {
+    tdarr-config = {
       metadata = {
-        name = "jellyfin-data";
+        name = "tdarr-config";
         namespace = "media";
       };
       spec = {
-        accessModes = [ "ReadWriteMany" ];
-        volumeMode = "Filesystem";
-        storageClassName = "longhorn-hdd";
+        accessModes = [ "ReadWriteOnce" ];
+        storageClassName = "longhorn-ssd";
         resources = {
           requests = {
-            storage = "2.5Ti";
+            storage = "5Gi";
           };
         };
       };

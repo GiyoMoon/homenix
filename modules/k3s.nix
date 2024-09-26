@@ -18,9 +18,15 @@ in
       6443 # K3s supervisor and Kubernetes API Server
       # 2379 # Required only for HA with embedded etcd
       # 2380 # Required only for HA with embedded etcd
+      53
+      80
+      443
+      7946
     ];
     allowedUDPPorts = [
       8472 # Required only for Flannel VXLAN
+      53
+      7946
     ];
   };
 
@@ -57,6 +63,8 @@ in
       # "--cluster-reset" # If everything breaks, this will save you :3
       "--disable=traefik"
       "--disable=metrics-server"
+      "--disable=local-storage"
+      "--disable=servicelb"
       ("--tls-san " + meta.hostname + ".lan")
     ];
   };

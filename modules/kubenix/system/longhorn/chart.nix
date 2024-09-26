@@ -17,12 +17,6 @@
         # backupTarget = "cifs://";
         # backupTargetCredentialSecret = "cifs-secret";
       };
-      service = {
-        ui = {
-          type = "LoadBalancer";
-          loadBalancerIP = "192.168.40.80";
-        };
-      };
     };
   };
 }

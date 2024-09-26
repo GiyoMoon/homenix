@@ -16,7 +16,7 @@
         "*.jasi.app"
       ];
       secretTemplate = {
-        annotation = {
+        annotations = {
           "reflector.v1.k8s.emberstack.com/reflection-allowed" = "true";
           "reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces" = "media";
           "reflector.v1.k8s.emberstack.com/reflection-auto-enabled" = "true";
@@ -44,9 +44,9 @@
       secretTemplate = {
         annotations = {
           "reflector.v1.k8s.emberstack.com/reflection-allowed" = "true";
-          "reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces" = "traefik";
+          "reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces" = "traefik,pihole,longhorn-system";
           "reflector.v1.k8s.emberstack.com/reflection-auto-enabled" = "true";
-          "reflector.v1.k8s.emberstack.com/reflection-auto-namespaces" = "traefik";
+          "reflector.v1.k8s.emberstack.com/reflection-auto-namespaces" = "traefik,pihole,longhorn-system";
         };
       };
     };

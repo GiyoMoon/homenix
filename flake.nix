@@ -11,6 +11,7 @@
     };
     turing-rk1 = {
       url = "github:GiyoMoon/nixos-turing-rk1";
+      # url = "git+file:///Users/jasi/Documents/dev/nixos-turing-rk1";
       # Don't follow nixpkgs, or we'd need to rebuild the entire kernel on every nixpkgs update
     };
     sops-nix = {
@@ -18,7 +19,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     kubenix = {
-      url = "github:hall/kubenix";
+      url = "github:GiyoMoon/kubenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -43,6 +44,11 @@
 
     longhorn-chart = {
       url = "github:longhorn/longhorn";
+      flake = false;
+    };
+
+    metallb-chart = {
+      url = "https://github.com/metallb/metallb/releases/download/metallb-chart-0.14.8/metallb-0.14.8.tgz";
       flake = false;
     };
   };
