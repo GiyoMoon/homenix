@@ -119,12 +119,12 @@
                   value = "https://jellyfin.jasi.app";
                 }
                 {
-                  name = "PGID";
-                  value = "\\x36\\x35\\x35\\x34\\x31"; # ASCII codes for '65541'
+                  name = "PUID";
+                  value = "65534";
                 }
                 {
-                  name = "PUID";
-                  value = "\\x31\\x30\\x34\\x34"; # ASCII codes for '1044'
+                  name = "PGID";
+                  value = "65534";
                 }
                 {
                   name = "TZ";

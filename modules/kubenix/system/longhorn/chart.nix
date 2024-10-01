@@ -1,4 +1,9 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  sops,
+  ...
+}:
 {
   kubernetes.helm.releases.longhorn = {
     chart = pkgs.stdenvNoCC.mkDerivation {
@@ -14,8 +19,8 @@
       defaultSettings = {
         createDefaultDiskLabeledNodes = true;
         defaultDataPath = "/storage";
-        # backupTarget = "cifs://";
-        # backupTargetCredentialSecret = "cifs-secret";
+        backupTarget = "ref+file://" + sops.secrets.longhorn_backup_target.path;
+        backupTargetCredentialSecret = "longhorn-backup";
       };
     };
   };

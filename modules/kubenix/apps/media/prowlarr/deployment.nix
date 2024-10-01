@@ -35,7 +35,7 @@
           containers = [
             {
               name = "prowlarr";
-              image = "ghcr.io/onedr0p/prowlarr:1.23.1.4708@sha256:63bf8d5bcf275043cf9bc94f50ac85b5e35775d3d217c0725300b4d54968db3e";
+              image = "ghcr.io/onedr0p/prowlarr:1.24.3.4754@sha256:0bafa88831a4164a253f74c8ff5cf82a1dbe5704068b1081b349e8f1026379c8";
               imagePullPolicy = "Always";
               resources = { };
               volumeMounts = [

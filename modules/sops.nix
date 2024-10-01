@@ -12,4 +12,7 @@
   sops.secrets.nzbget_auth_user = { };
   sops.secrets.nzbget_auth_password = { };
   sops.secrets.pihole_password = { };
+  sops.secrets.longhorn_backup_target = { };
+  sops.secrets.longhorn_backup_username = { };
+  sops.secrets.longhorn_backup_password = { };
 }

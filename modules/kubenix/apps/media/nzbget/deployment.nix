@@ -25,6 +25,13 @@
           };
         };
         spec = {
+          # securityContext = {
+          #   runAsNonRoot = true;
+          #   runAsUser = 65534;
+          #   runAsGroup = 65534;
+          #   fsGroup = 65534;
+          #   fsGroupChangePolicy = "OnRootMismatch";
+          # };
           containers = [
             {
               name = "nzbget";
@@ -36,11 +43,28 @@
                   name = "nzbget-config";
                   mountPath = "/config";
                 }
+                {
+                  name = "nzbget-downloads";
+                  mountPath = "/downloads";
+                  subPath = "downloads/usenet";
+                }
               ];
               env = [
                 {
                   name = "TZ";
                   value = "Europe/Zurich";
+                }
+                {
+                  name = "PUID";
+                  value = "65534";
+                }
+                {
+                  name = "PGID";
+                  value = "65534";
+                }
+                {
+                  name = "UMASK";
+                  value = "000";
                 }
                 {
                   name = "NZBGET_USER";
@@ -68,6 +92,12 @@
               name = "nzbget-config";
               persistentVolumeClaim = {
                 claimName = "nzbget-config";
+              };
+            }
+            {
+              name = "nzbget-downloads";
+              persistentVolumeClaim = {
+                claimName = "jellyfin-data";
               };
             }
           ];

@@ -4,6 +4,10 @@
       metadata = {
         name = "tdarr-server";
         namespace = "media";
+        labels = {
+          "recurring-job.longhorn.io/source" = "enabled";
+          "recurring-job.longhorn.io/backup" = "enabled";
+        };
       };
       spec = {
         accessModes = [ "ReadWriteOnce" ];
@@ -19,6 +23,10 @@
       metadata = {
         name = "tdarr-config";
         namespace = "media";
+        labels = {
+          "recurring-job.longhorn.io/source" = "enabled";
+          "recurring-job.longhorn.io/backup" = "enabled";
+        };
       };
       spec = {
         accessModes = [ "ReadWriteOnce" ];

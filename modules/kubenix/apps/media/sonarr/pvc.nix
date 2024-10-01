@@ -3,6 +3,10 @@
     metadata = {
       name = "sonarr-config";
       namespace = "media";
+      labels = {
+        "recurring-job.longhorn.io/source" = "enabled";
+        "recurring-job.longhorn.io/backup" = "enabled";
+      };
     };
     spec = {
       accessModes = [ "ReadWriteOnce" ];
