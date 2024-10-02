@@ -15,4 +15,5 @@
   sops.secrets.longhorn_backup_target = { };
   sops.secrets.longhorn_backup_username = { };
   sops.secrets.longhorn_backup_password = { };
+  sops.secrets.cloudflare_ddns_config = { };
 }
