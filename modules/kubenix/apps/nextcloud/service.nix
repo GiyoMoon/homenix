@@ -11,8 +11,8 @@
       ports = [
         {
           protocol = "TCP";
-          port = 80;
-          targetPort = 80;
+          port = 443;
+          targetPort = 443;
         }
       ];
     };

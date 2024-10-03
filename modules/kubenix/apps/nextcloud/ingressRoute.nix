@@ -16,7 +16,7 @@
           services = [
             {
               name = "nextcloud";
-              port = 80;
+              port = 443;
             }
           ];
         }
