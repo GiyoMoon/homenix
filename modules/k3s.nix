@@ -22,6 +22,8 @@ in
       80
       443
       7946
+      25565
+      25575
     ];
     allowedUDPPorts = [
       8472 # Required only for Flannel VXLAN

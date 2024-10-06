@@ -16,4 +16,6 @@
   sops.secrets.longhorn_backup_username = { };
   sops.secrets.longhorn_backup_password = { };
   sops.secrets.cloudflare_ddns_config = { };
+  sops.secrets.minecraft_rcon_password = { };
+  sops.secrets.minecraft_whitelist_uuids = { };
 }
