@@ -18,4 +18,7 @@
   sops.secrets.cloudflare_ddns_config = { };
   sops.secrets.minecraft_rcon_password = { };
   sops.secrets.minecraft_whitelist_uuids = { };
+  sops.secrets.cozy_stack_password = { };
+  sops.secrets.cozy_couchdb_password = { };
+  sops.secrets.cozy_couchdb_url = { };
 }

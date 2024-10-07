@@ -1,5 +1,6 @@
 {
   imports = [
+    ./cozy
     ./ddns
     ./media
     ./minecraft

@@ -18,9 +18,9 @@
       secretTemplate = {
         annotations = {
           "reflector.v1.k8s.emberstack.com/reflection-allowed" = "true";
-          "reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces" = "media,nextcloud";
+          "reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces" = "media,nextcloud,cozy";
           "reflector.v1.k8s.emberstack.com/reflection-auto-enabled" = "true";
-          "reflector.v1.k8s.emberstack.com/reflection-auto-namespaces" = "media,nextcloud";
+          "reflector.v1.k8s.emberstack.com/reflection-auto-namespaces" = "media,nextcloud,cozy";
         };
       };
     };
@@ -38,7 +38,6 @@
       };
       commonName = "*.local.jasi.app";
       dnsNames = [
-        "local.jasi.app"
         "*.local.jasi.app"
       ];
       secretTemplate = {
@@ -47,6 +46,31 @@
           "reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces" = "traefik,pihole,longhorn-system";
           "reflector.v1.k8s.emberstack.com/reflection-auto-enabled" = "true";
           "reflector.v1.k8s.emberstack.com/reflection-auto-namespaces" = "traefik,pihole,longhorn-system";
+        };
+      };
+    };
+  };
+  kubernetes.resources.certificates.cozy-jasi-app = {
+    metadata = {
+      name = "cozy-jasi-app";
+      namespace = "cert-manager";
+    };
+    spec = {
+      secretName = "cozy-jasi-app";
+      issuerRef = {
+        name = "letsencrypt";
+        kind = "ClusterIssuer";
+      };
+      commonName = "*.cozy.jasi.app";
+      dnsNames = [
+        "*.cozy.jasi.app"
+      ];
+      secretTemplate = {
+        annotations = {
+          "reflector.v1.k8s.emberstack.com/reflection-allowed" = "true";
+          "reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces" = "cozy";
+          "reflector.v1.k8s.emberstack.com/reflection-auto-enabled" = "true";
+          "reflector.v1.k8s.emberstack.com/reflection-auto-namespaces" = "cozy";
         };
       };
     };
