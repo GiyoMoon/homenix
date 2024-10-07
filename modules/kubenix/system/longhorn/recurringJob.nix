@@ -8,7 +8,7 @@
       # Daily at 04:00
       cron = "0 4 * * *";
       task = "backup";
-      retain = 2;
+      retain = 1;
       concurrency = 1;
     };
   };
