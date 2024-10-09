@@ -1,5 +1,6 @@
 {
   imports = [
+    ./mariadb
     ./deployment.nix
     ./ingressRoute.nix
     ./pvc.nix

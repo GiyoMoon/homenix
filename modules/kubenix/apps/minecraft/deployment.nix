@@ -30,7 +30,7 @@
             containers = [
               {
                 name = "minecraft";
-                image = "itzg/minecraft-server:2024.10.0-java21@sha256:8e4850952064ac4e55ac7d302bf1beff6e25bb52f96d0bc524b9349e34b0ef4a";
+                image = "itzg/minecraft-server:2024.10.0-java8@sha256:16bb4ec2a424cf94830688adee3546b56636ca1e88dc056b27abbca55c690939";
                 imagePullPolicy = "Always";
                 resources = { };
                 env = [
@@ -54,15 +54,23 @@
                   }
                   {
                     name = "TYPE";
-                    value = "FABRIC";
+                    value = "AUTO_CURSEFORGE";
                   }
                   {
                     name = "MOTD";
-                    value = "Helo";
+                    value = "Sponsored by jasi";
                   }
                   {
                     name = "DIFFICULTY";
-                    value = "hard";
+                    value = "normal";
+                  }
+                  {
+                    name = "CF_SLUG";
+                    value = "skyfactory-4";
+                  }
+                  {
+                    name = "CF_API_KEY";
+                    value = "ref+file://" + sops.secrets.minecraft_curseforge_api_key.path;
                   }
                   # === Whitelist ===
                   {
@@ -76,6 +84,16 @@
                   {
                     name = "RCON_PASSWORD";
                     value = "ref+file://" + sops.secrets.minecraft_rcon_password.path;
+                  }
+                  {
+                    name = "LEVEL_TYPE";
+                    value = "default";
+                  }
+                  {
+                    name = "CUSTOM_SERVER_PROPERTIES";
+                    value = ''
+                      generator-settings={"Topography-Preset":"Sky Factory 4"}
+                    '';
                   }
                 ];
                 volumeMounts = [
