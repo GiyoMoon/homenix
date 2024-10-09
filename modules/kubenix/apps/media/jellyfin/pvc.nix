@@ -20,21 +20,21 @@
         };
       };
     };
-    jellyfin-data = {
-      metadata = {
-        name = "jellyfin-data";
-        namespace = "media";
-      };
-      spec = {
-        accessModes = [ "ReadWriteMany" ];
-        volumeMode = "Filesystem";
-        storageClassName = "longhorn-hdd";
-        resources = {
-          requests = {
-            storage = "2.5Ti";
-          };
-        };
-      };
-    };
+    # jellyfin-data = {
+    #   metadata = {
+    #     name = "jellyfin-data";
+    #     namespace = "media";
+    #   };
+    #   spec = {
+    #     accessModes = [ "ReadWriteMany" ];
+    #     volumeMode = "Filesystem";
+    #     storageClassName = "longhorn-hdd";
+    #     resources = {
+    #       requests = {
+    #         storage = "2.5Ti";
+    #       };
+    #     };
+    #   };
+    # };
   };
 }

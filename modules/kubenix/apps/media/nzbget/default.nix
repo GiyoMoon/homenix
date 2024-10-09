@@ -1,9 +1,9 @@
 {
   imports = [
-    ./deployment.nix
-    ./secret.nix
-    ./ingressRoute.nix
+    # ./deployment.nix
+    # ./secret.nix
+    # ./ingressRoute.nix
     ./pvc.nix
-    ./service.nix
+    # ./service.nix
   ];
 }
