@@ -56,6 +56,11 @@
                   name = "WGET_USER_AGENT";
                   value = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36";
                 }
+                # Until archive.org is up again :'(
+                {
+                  name = "SAVE_ARCHIVE_DOT_ORG";
+                  value = "False";
+                }
               ];
               volumeMounts = [
                 {
