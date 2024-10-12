@@ -29,4 +29,6 @@
   sops.secrets.minecraft_curseforge_api_key = { };
 
   sops.secrets.nextcloud_mariadb_password = { };
+
+  sops.secrets.fishnet_private_key = { };
 }
