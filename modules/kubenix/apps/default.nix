@@ -1,5 +1,6 @@
 {
   imports = [
+    ./archivebox
     ./ddns
     # ./fishnet
     ./media
