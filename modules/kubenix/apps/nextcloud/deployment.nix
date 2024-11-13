@@ -28,7 +28,7 @@
           containers = [
             {
               name = "nextcloud";
-              image = "linuxserver/nextcloud:30.0.0@sha256:6fb470054fe7faaa3297604ac8ae64116905b7b6a3669b3bdbdcc8a15407848d";
+              image = "linuxserver/nextcloud:30.0.2@sha256:085cba3d764613d1b7311cb55384aad594f34fc4b001a62e55b45e8944281ff0";
               imagePullPolicy = "Always";
               resources = { };
               env = [

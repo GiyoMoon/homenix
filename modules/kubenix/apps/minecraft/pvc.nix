@@ -16,10 +16,26 @@
         };
       };
     };
-    # Stoneblock 3
+    # Stoneblock 3 | 2024.11.09
     minecraft-data-stoneblock-3 = {
       metadata = {
         name = "minecraft-data-stoneblock-3";
+        namespace = "minecraft";
+      };
+      spec = {
+        accessModes = [ "ReadWriteMany" ];
+        storageClassName = "longhorn-ssd";
+        resources = {
+          requests = {
+            storage = "10Gi";
+          };
+        };
+      };
+    };
+    # Vanilla
+    minecraft-data-vanilla = {
+      metadata = {
+        name = "minecraft-data-vanilla";
         namespace = "minecraft";
       };
       spec = {

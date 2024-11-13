@@ -31,4 +31,6 @@
   sops.secrets.nextcloud_mariadb_password = { };
 
   sops.secrets.fishnet_private_key = { };
+
+  sops.secrets.enclosed_jwt_secret = { };
 }

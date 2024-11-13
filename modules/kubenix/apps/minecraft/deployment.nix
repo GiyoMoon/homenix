@@ -30,7 +30,7 @@
             containers = [
               {
                 name = "minecraft";
-                image = "itzg/minecraft-server:2024.10.0-java17@sha256:e4869a9eb294dae5e40b4bc8c3566787592472476edb4b13daba1a8180be5efa";
+                image = "itzg/minecraft-server:2024.10.2-java21@sha256:8bd119f65ef6e65bdb12f756bfb44a305b36b1adf868ade8027014fabc29c755";
                 imagePullPolicy = "Always";
                 resources = { };
                 env = [
@@ -54,7 +54,7 @@
                   }
                   {
                     name = "TYPE";
-                    value = "AUTO_CURSEFORGE";
+                    value = "VANILLA";
                   }
                   {
                     name = "MOTD";
@@ -65,9 +65,13 @@
                     value = "normal";
                   }
                   {
-                    name = "CF_SLUG";
-                    value = "ftb-stoneblock-3";
+                    name = "VIEW_DISTANCE";
+                    value = "15";
                   }
+                  # {
+                  #   name = "CF_SLUG";
+                  #   value = "ftb-stoneblock-3";
+                  # }
                   {
                     name = "CF_API_KEY";
                     value = "ref+file://" + sops.secrets.minecraft_curseforge_api_key.path;
@@ -98,7 +102,7 @@
                 ];
                 volumeMounts = [
                   {
-                    name = "minecraft-data-stoneblock-3";
+                    name = "minecraft-data-vanilla";
                     mountPath = "/data";
                   }
                 ];
@@ -106,9 +110,9 @@
             ];
             volumes = [
               {
-                name = "minecraft-data-stoneblock-3";
+                name = "minecraft-data-vanilla";
                 persistentVolumeClaim = {
-                  claimName = "minecraft-data-stoneblock-3";
+                  claimName = "minecraft-data-vanilla";
                 };
               }
             ];
@@ -164,7 +168,7 @@
                 ];
                 volumeMounts = [
                   {
-                    name = "minecraft-data-stoneblock-3";
+                    name = "minecraft-data-vanilla";
                     mountPath = "/data";
                   }
                   {
@@ -176,9 +180,9 @@
             ];
             volumes = [
               {
-                name = "minecraft-data-stoneblock-3";
+                name = "minecraft-data-vanilla";
                 persistentVolumeClaim = {
-                  claimName = "minecraft-data-stoneblock-3";
+                  claimName = "minecraft-data-vanilla";
                 };
               }
               {

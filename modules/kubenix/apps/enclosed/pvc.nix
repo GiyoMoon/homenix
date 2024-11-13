@@ -1,8 +1,8 @@
 {
-  kubernetes.resources.persistentVolumeClaims.nextcloud-mariadb = {
+  kubernetes.resources.persistentVolumeClaims.enclosed-data = {
     metadata = {
-      name = "nextcloud-mariadb";
-      namespace = "nextcloud";
+      name = "enclosed-data";
+      namespace = "enclosed";
       labels = {
         "recurring-job.longhorn.io/source" = "enabled";
         "recurring-job.longhorn.io/backup" = "enabled";
@@ -13,7 +13,7 @@
       storageClassName = "longhorn-ssd";
       resources = {
         requests = {
-          storage = "30Gi";
+          storage = "20Gi";
         };
       };
     };

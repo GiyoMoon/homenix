@@ -110,6 +110,7 @@
           # Enable on first run
           # sshUser = "nixos";
           user = "root";
+          autoRollback = false;
           magicRollback = false;
           profiles.system.path = deploy-rs.lib.aarch64-linux.activate.nixos self.nixosConfigurations.node1;
         };
@@ -119,6 +120,7 @@
           # Enable on first run
           # sshUser = "nixos";
           user = "root";
+          autoRollback = false;
           magicRollback = false;
           profiles.system.path = deploy-rs.lib.aarch64-linux.activate.nixos self.nixosConfigurations.node3;
         };
