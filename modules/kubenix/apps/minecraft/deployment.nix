@@ -54,7 +54,7 @@
                   }
                   {
                     name = "TYPE";
-                    value = "VANILLA";
+                    value = "FABRIC";
                   }
                   {
                     name = "MOTD";
@@ -62,11 +62,11 @@
                   }
                   {
                     name = "DIFFICULTY";
-                    value = "normal";
+                    value = "hard";
                   }
                   {
                     name = "VIEW_DISTANCE";
-                    value = "15";
+                    value = "12";
                   }
                   # {
                   #   name = "CF_SLUG";
@@ -164,6 +164,46 @@
                   {
                     name = "RCON_PASSWORD";
                     value = "ref+file://" + sops.secrets.minecraft_rcon_password.path;
+                  }
+                  {
+                    name = "BACKUP_NAME";
+                    value = "vanilla";
+                  }
+                  {
+                    name = "BACKUP_METHOD";
+                    value = "restic";
+                  }
+                  {
+                    name = "BACKUP_INTERVAL";
+                    value = "30m";
+                  }
+                  {
+                    name = "PAUSE_IF_NO_PLAYERS";
+                    value = "true";
+                  }
+                  {
+                    name = "EXCLUDES";
+                    value = "*.jar,cache,.cache,logs,*.tmp,libraries,.fabric,versions";
+                  }
+                  {
+                    name = "RESTIC_HOSTNAME";
+                    value = "jasi";
+                  }
+                  {
+                    name = "RESTIC_REPOSITORY";
+                    value = "/backups/restic";
+                  }
+                  {
+                    name = "RESTIC_PASSWORD";
+                    value = "mcbackup";
+                  }
+                  {
+                    name = "RESTIC_REPOSITORY";
+                    value = "/backups/restic";
+                  }
+                  {
+                    name = "PRUNE_RESTIC_RETENTION";
+                    value = "--keep-last 16 --keep-daily 7 --keep-weekly 52";
                   }
                 ];
                 volumeMounts = [
