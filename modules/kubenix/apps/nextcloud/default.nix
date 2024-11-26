@@ -1,4 +1,5 @@
 {
+  # sudo -u abc php -f /app/www/public/occ files:scan {username}
   imports = [
     ./mariadb
     ./deployment.nix

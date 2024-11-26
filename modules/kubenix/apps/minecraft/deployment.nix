@@ -66,7 +66,7 @@
                   }
                   {
                     name = "VIEW_DISTANCE";
-                    value = "12";
+                    value = "8";
                   }
                   # {
                   #   name = "CF_SLUG";
