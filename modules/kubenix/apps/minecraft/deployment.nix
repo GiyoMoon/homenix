@@ -57,16 +57,24 @@
                     value = "FABRIC";
                   }
                   {
+                    name = "VERSION";
+                    value = "1.21.3";
+                  }
+                  {
                     name = "MOTD";
                     value = "Sponsored by jasi";
                   }
                   {
                     name = "DIFFICULTY";
-                    value = "hard";
+                    value = "normal";
                   }
                   {
                     name = "VIEW_DISTANCE";
                     value = "8";
+                  }
+                  {
+                    name = "SPAWN_PROTECTION";
+                    value = "0";
                   }
                   # {
                   #   name = "CF_SLUG";
